@@ -1,0 +1,484 @@
+/* Reset dan styling dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling header */
+header {
+    background-color: #0066cc; /* Warna biru untuk header */
+    color: #fff;
+    padding: 1em;
+    text-align: left;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}x
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan ringan */
+}
+
+/* Efek hover pada gambar profil */
+.profile-pic:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan saat hover */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling umum */
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Warna latar belakang lembut */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: #0066cc; /* Warna yang sama dengan header */
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styling nav */
+nav {
+    width: 25%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0.5em 0;
+}
+
+/* Styling link dan efek hover di navigasi */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+/* Styling untuk timeline */
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+    list-style-type: none;
+    border-left: 4px solid #0066cc; /* Garis vertikal di tengah */
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px; /* Tambahkan padding di sebelah kiri untuk memberi ruang pada garis vertikal */
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #0066cc;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Styling untuk daftar pengalaman */
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    width: 100%; /* Lebar penuh section */
+}
+
+.experience-list li i {
+    color: #0066cc;
+    margin-bottom: 10px;
+    font-size: 24px; /* Ukuran ikon lebih besar */
+}
+
+.experience-list li strong {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.experience-list li p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center; /* Pusatkan teks */
+    width: 80%; /* Tambahkan lebar agar lebih rapi */
+}
+
+
+/* Styling untuk kartu publikasi */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #0066cc;
+    font-size: 1.5em;
+}
+
+.card .date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.card a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk container biodata */
+#biodata {
+    background-color: #f9f9f9; /* Warna latar belakang lembut */
+    padding: 20px;
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    width: 100%; /* Lebar penuh */
+    max-width: 500px; /* Maksimal lebar agar tetap rapi */
+    margin: 20px auto; /* Agar berada di tengah */
+}
+
+/* Styling untuk heading biodata */
+#biodata h2 {
+    color: #0066cc; /* Warna teks heading */
+    text-align: center; /* Teks di tengah */
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Ukuran teks */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling untuk isi biodata */
+.bio p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333; /* Warna teks yang lebih gelap */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Membuat label (NIM, Nama, dll.) lebih tegas */
+.bio p strong {
+    color: #0066cc; /* Warna teks label */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Menambahkan garis di antara setiap item biodata */
+.bio p + p {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Efek hover untuk membuat elemen lebih interaktif */
+#biodata:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan lebih tegas saat hover */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Styling untuk skill bars */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin-bottom: 5px;
+    color: #0066cc;
+    font-size: 1.2em;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 8px;
+    height: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.skill-level {
+    background-color: #0066cc;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}
+
+
+/* Styling untuk section */
+
+section {
+    width: 50%;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efek hover untuk section */
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Styling untuk Aside Hobi */
+aside {
+    width: 25%;
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 12px; /* Sudut lebih bulat */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan lebih lembut */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Efek transisi */
+}
+
+/* Efek hover pada aside */
+aside:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas saat hover */
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+/* Styling heading di aside */
+aside h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #0066cc; /* Warna biru heading */
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan teks */
+}
+
+/* Styling daftar hobi */
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Beri jarak antara ikon dan teks */
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+aside ul li i {
+    font-size: 1.5em; /* Ukuran ikon */
+    color: #0066cc; /* Warna ikon */
+}
+
+/* Efek hover pada item hobi */
+aside ul li:hover {
+    background-color: #0066cc;
+    color: white;
+    transform: translateY(-3px);
+}
+
+aside ul li:hover i {
+    color: white; /* Ubah warna ikon saat hover */
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    background-color: #0066cc;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        width: 100%; /* Header tetap di atas dengan lebar penuh */
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap; /* Tidak tumpuk, susun horizontal */
+        align-items: flex-start; /* Mulai dari atas */
+        height: auto; /* Sesuaikan tinggi dengan konten */
+    }
+
+    nav {
+        width: 25%; /* Navbar di kiri */
+        height: 100vh; /* Tinggi 100% viewport agar sejajar dengan konten */
+        margin: 0;
+        padding: 1em;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Bayangan pemisah */
+    }
+
+    section {
+        width: 75%; /* Section di kanan navbar */
+        padding: 1em;
+        margin-bottom: 20px;
+    }
+
+    aside {
+        width: 100%; /* Aside di bawah section */
+        margin-bottom: 20px;
+    }
+
+    footer {
+        width: 100%; /* Footer di bawah aside */
+    }
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    header, nav, section, aside, footer {
+        width: 100%; /* Semua elemen mengambil lebar penuh */
+    }
+
+    .container {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        padding: 1em;
+    }
+
+    nav {
+        margin-bottom: 20px; /* Berikan jarak antar elemen */
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    aside {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Ukuran heading lebih kecil */
+    }
+
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul li a {
+        padding: 0.6em;
+        font-size: 1em; /* Ukuran teks disesuaikan */
+    }
+
+    section, aside {
+        padding: 0.5em;
+    }
+
+    nav, section, aside, footer {
+        width: 100%; /* Semua elemen full width */
+    }
+
+    .container {
+        flex-direction: column; /* Susun secara vertikal */
+        padding: 1em;
+    }
+}
